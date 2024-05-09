@@ -110,7 +110,7 @@ const Index = () => {
           <p>Lower: ${minPrice}</p>
           <p>Higher: ${maxPrice}</p>
         </div>
-        <p className="currency-price">1 BTC = $5.483</p>
+        <p className="currency-price">1 BTC = $61181.20</p>
         <div className="price-chart">
           <PriceChart data={quotesData} loading={loading} error={error} />
         </div>
