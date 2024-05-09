@@ -7,6 +7,10 @@
     text-transform: capitalize;
     color: $secondary-color;
     padding: 7px 10px;
+    font-size: 15px;
+    &:not(.active):hover {
+      color: $primary-color;
+    }
     &.active {
       background-color: $secondary-color;
       color: $white;
@@ -44,6 +48,6 @@
   bottom: 20px;
   &::before {
     background: linear-gradient(-50deg, #ffc843, #ff8f17);
-    // box-shadow: inset 5px 5px 10px #ffc13d, 
-  };
+    // box-shadow: inset 5px 5px 10px #ffc13d,
+  }
 }
