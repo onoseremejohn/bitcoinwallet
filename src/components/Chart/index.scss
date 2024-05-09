@@ -1,0 +1,49 @@
+@use "../../scss/utils/" as *;
+
+.durations {
+  @include flex();
+  margin: 15px 0;
+  > button {
+    text-transform: capitalize;
+    color: $secondary-color;
+    padding: 7px 10px;
+    &.active {
+      background-color: $secondary-color;
+      color: $white;
+    }
+  }
+}
+
+.price-chart {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.boundary-price {
+  @include flex();
+  color: $secondary-color;
+  p {
+    position: relative;
+    @include bullet-price;
+  }
+  p:first-child::before {
+    background-color: #ef2755;
+  }
+  p:last-child::before {
+    background-color: #1ec070;
+  }
+}
+
+.currency-price {
+  @include bullet-price;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  &::before {
+    background: linear-gradient(-50deg, #ffc843, #ff8f17);
+    // box-shadow: inset 5px 5px 10px #ffc13d, 
+  };
+}

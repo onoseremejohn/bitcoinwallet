@@ -1,0 +1,12 @@
+@use "../../scss/utils/" as *;
+
+.gradient-circle {
+  width: 38.5px;
+  height: 38.5px;
+  border-radius: 50%;
+  @include flex($justifyContent: center);
+  svg {
+    color: white;
+    font-size: 25px;
+  }
+}

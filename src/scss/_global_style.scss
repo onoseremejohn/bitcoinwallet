@@ -1,0 +1,95 @@
+@use "./utils/" as *;
+
+@font-face {
+  font-family: "SFProDisplayRegular";
+  src: url("../fonts/SF-Pro-Display-Regular.otf");
+}
+@font-face {
+  font-family: "SFProDisplaySemibold";
+  src: url("../fonts/SF-Pro-Display-Semibold.otf");
+}
+@font-face {
+  font-family: "SFProDisplayBold";
+  src: url("../fonts/SF-Pro-Display-Bold.otf");
+}
+
+/* Reset CSS */
+
+/* Box-sizing reset, Remove default margin and padding */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default anchor styles */
+a {
+  text-decoration: none;
+}
+
+input,
+textarea,
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  font-family: $primary-font;
+  color: $primary-color;
+  background-color: $primary-background-color;
+}
+
+.button-icon {
+  color: $secondary-color;
+  padding: 5px;
+  svg {
+    font-size: 25px;
+  }
+}
+
+.button-text {
+  color: $white;
+  border-radius: 80px;
+  padding: 4px 10px;
+  font-family: $primary-font;
+}
+
+.card {
+  background-color: $white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 14px 27px rgba(154, 155, 176, 0.17);
+}
+
+.action {
+  @include flex($flexDirection: column, $gap: 13px);
+  font-family: $primary-font;
+  font-size: 16px;
+  color: $primary-color;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+}

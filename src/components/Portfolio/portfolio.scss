@@ -1,0 +1,41 @@
+@use "../../scss/utils/" as *;
+
+.portfolio {
+  font-size: 16px;
+  padding-bottom: 5px;
+  .flex {
+    @include flex();
+  }
+  .coin-name {
+    margin-left: 18px;
+  }
+  &__header {
+    margin-bottom: 20px;
+  }
+  h4 {
+    font-size: 33px;
+  }
+
+  .rate-change {
+    background-color: #ee225d;
+    color: $white;
+    font-family: $secondary-font;
+  }
+  .dropdown-content {
+    opacity: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    &.active {
+      opacity: 1;
+      max-height: 100px;
+    }
+    .flex {
+      gap: 25px;
+      margin-top: 15px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

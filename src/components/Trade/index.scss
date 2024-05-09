@@ -1,0 +1,6 @@
+@use "../../scss/utils/" as *;
+
+.actions-container {
+  margin-top: 22px;
+  @include flex($gap: 22px)
+}

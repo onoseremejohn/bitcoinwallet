@@ -1,0 +1,28 @@
+@use "../../scss/utils/" as *;
+
+header {
+  @include fixed(top, $z-index: 11);
+  @include flex();
+  padding: 18px;
+  h1 {
+    font-size: 26px;
+    text-align: center;
+  }
+  .menu-list {
+    padding: 12px;
+    border-radius: 12px;
+    li > button {
+      @include flex($gap: 40px);
+      color: $primary-color;
+      text-wrap: nowrap;
+      font-size: 16px;
+      text-align: left;
+      font-family: $primary-font;
+      border-bottom: 1px solid #ccc;
+    }
+    li:last-child > button {
+      color: red;
+      border-bottom: none;
+    }
+  }
+}

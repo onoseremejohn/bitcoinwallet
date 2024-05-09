@@ -1,0 +1,10 @@
+@use "../../scss/utils/" as *;
+
+footer {
+  @include fixed(bottom);
+  @include flex($justifyContent: space-around);
+  padding: 1em;
+  button.active {
+    color: $primary-color;
+  }
+}

@@ -1,0 +1,43 @@
+@use "./variables" as *;
+
+@mixin flex(
+  $alignItem: center,
+  $justifyContent: space-between,
+  $flexDirection: row,
+  $gap: 0px
+) {
+  display: flex;
+  flex-direction: $flexDirection;
+  gap: $gap;
+  align-items: $alignItem;
+  justify-content: $justifyContent;
+}
+
+@mixin fixed($position, $height: auto, $z-index: 10) {
+  position: fixed;
+  width: 100%;
+  height: $height;
+  background-color: $white;
+  z-index: $z-index;
+
+  @if $position == top {
+    top: 0;
+  } @else if $position == bottom {
+    bottom: 0;
+  }
+}
+
+@mixin bullet-price {
+  font-size: 15px;
+  padding-left: 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+}
