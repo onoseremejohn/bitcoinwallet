@@ -4,6 +4,7 @@ header {
   @include fixed(top, $z-index: 11);
   @include flex();
   padding: 18px;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1);
   h1 {
     font-size: 26px;
     text-align: center;
